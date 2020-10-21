@@ -1,0 +1,164 @@
+	\documentclass[12pt,a4paper,openright]{report}
+	\usepackage{bm}
+	\usepackage{geometry}
+	\usepackage[T1]{fontenc}
+	\usepackage{amsfonts}
+	\usepackage{relsize}
+	\usepackage[Lenny]{fncychap}
+	\makeatletter
+	\def\mathbi#1{\textbf{\em #1}}
+	\def\@makeschapterhead#1{%
+		\vspace*{0\p@}%
+		{\parindent\z@\raggedright\normalfont\interlinepenalty\@M
+			\DOTIS{#1}%
+			\vskip-30\p@ 
+			\kern-.4\p@
+			\vskip0\p@}%
+	}
+	\makeatother
+	\usepackage{verbatim}
+	\usepackage{algorithm}
+	\usepackage{algpseudocode}
+	\usepackage{listings}
+	\usepackage{etoolbox}
+	\makeatletter
+	\patchcmd{\l@chapter}{\bfseries}{}{}{}
+	\makeatother
+	\usepackage{empheq}
+	\usepackage{longtable}
+	\geometry{
+		a4paper,
+		left = 25.5mm,
+		top = 0mm,
+		bottom = 25.5mm,
+	}
+	\usepackage{amsmath, amsthm, amssymb}
+	%\usepackage{nomencl}
+	\usepackage{epstopdf}
+	\usepackage{caption}
+	\usepackage{float}
+	\usepackage{latexsym}
+	\usepackage{array}
+	\usepackage{acronym}
+	\usepackage{setspace}
+	\usepackage{fancyhdr}
+	\usepackage{xcolor}
+	\usepackage{multicol}
+	\usepackage{lipsum}
+	\usepackage{verbatim}
+	\usepackage{layaureo}
+	\usepackage{chngpage}
+	\usepackage{amsfonts}
+	\usepackage{makeidx}
+	\makeindex
+	\usepackage{enumerate}
+	\usepackage{calligra}
+	\usepackage[font={footnotesize}]{caption}
+	\usepackage[scr=boondoxo,
+	scrscaled=1.15,]{mathalfa}
+	\usepackage{multirow}
+	\usepackage{cite}
+	\usepackage{graphicx}
+	\usepackage{url}
+	\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} 
+	
+	\begin{document}
+		\begin{titlepage}
+			
+			\begin{center}
+				\Huge{\textbf{MAKERERE}}\includegraphics[width=0.2\textwidth]{logo.png}\Huge{\textbf{UNIVERSITY}}\\[0.5in]
+				\Large
+				COLLEGE OF ENGINEERING, DESIGN, ART \& TECHNOLOGY\\[0.3in]
+				SCHOOL OF ENGINEERING\\[0.3in]
+				\large{DEPARTMENT OF ELECTRICAL \& COMPUTER ENGINEERING} \\[.5in]
+				
+				% Title
+				\Large \textbf {Assignment 1}\\[.3in]
+				\Large \textbf {Smith Charts}\\[.5in]
+				
+				
+				
+				% Submitted by
+				\normalsize Submitted by \\[0.2in]
+				\textbf{Patrick Odong}\\
+				16/U/1012\\
+				216000495\\
+				
+				\vspace{.5in}
+				\Large \textbf {Group Members}\\[.1in]
+				
+				\begin{table}[H]
+					\begin{center}
+						%\caption{Group Members}\label{table1}
+						\begin{tabular}{|l|l|}
+							\hline
+							Name & Reg. No.\\ \hline
+							Odong Patrick & 16/U/1012 \\ \hline
+							Kirabo Doreen Zawedde & 16/U/6074/PS \\ \hline
+							Gore Richard & 16/U/4845/PSA \\ \hline
+							Iradukunda Silvan & 16/U/4938/PS \\ \hline
+						\end{tabular}
+					\end{center}
+				\end{table}
+				
+				
+				\vfill
+				\normalsize
+				$19^{th}$ October, 2020
+				
+				% Bottom of the page
+				
+				
+			\end{center}
+			
+		\end{titlepage}
+	\noindent \section*{Solution}
+	
+	\renewcommand{\theenumii}{\roman{enumii}}
+	
+	\begin{enumerate}
+		\item
+		
+		\begin{align*}
+		Z_\mathbf{L}=20+j50 \Omega
+		\end{align*}
+		
+		\begin{align*}
+		\bar{Z_\mathbf{L}}=\frac{20+j50 }{50}
+		\end{align*}
+		
+		\begin{align*}
+		\bar{Z_\mathbf{L}}=0.4+j1
+		\end{align*}
+		
+		\begin{enumerate}
+			\item 
+			\begin{align*}
+			\mathsf{SWR}=5.2
+			\end{align*}
+
+			\item 
+			
+			Given that $l=0.3\lambda$, we move towards the generator $(0.135+0.3)\lambda=0.435\lambda$ position
+			
+			\begin{align*}
+			\bar{Y_in}=0.75+j1.2
+			\end{align*}
+			
+			\therefore
+			
+			\begin{align*}
+			Y_{in}=\frac{0.75+j1.2}{50}
+			\end{align*}
+			
+			\begin{align*}
+			Y_in=0.015+j0.024 S
+			\end{align*}
+			
+			\item 
+			$l_{min}=0.365\lambda$ (from open circuit towards the load)
+			$l_{max}=0.25\lambda-0.135\lambda=0.115\lambda$ (from $\infty$ towards the load)
+			
+		\end{enumerate}
+	\end{enumerate}
+    \end{document}
